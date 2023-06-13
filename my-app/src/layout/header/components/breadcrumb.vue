@@ -2,9 +2,13 @@
   <el-breadcrumb separator="/">
     <el-breadcrumb-item v-for="(item, index) in breadList" :key="index">
       <span class='no-redirect' v-if="index === breadList.length - 1">
-        {{ item.name }}
+        {{
+        $t(`menus.${item.name}`)
+      }}
       </span>
-      <span class='redirect' v-else @click= "toggleClick(item.path)"> {{ item.name }}</span>
+      <span class='redirect' v-else @click= "toggleClick(item.path)">{{
+        $t(`menus.${item.name}`)
+      }}</span>
     </el-breadcrumb-item>
   </el-breadcrumb>
 </template>

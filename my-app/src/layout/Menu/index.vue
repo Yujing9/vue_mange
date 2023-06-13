@@ -28,7 +28,7 @@
       >
         <template #title>
           <el-icon><component :is="icon"></component></el-icon>
-          {{ child.authName }}
+          {{ $t(`menus.${child.path}`) }}
         </template>
       </el-menu-item>
     </el-sub-menu>

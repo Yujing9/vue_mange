@@ -8,7 +8,7 @@
       :rules="rules"
     >
       <div class="title-container">
-        <h3 class="title">登陆页面</h3>
+        <h3 class="title">{{ $t('login.title') }}</h3>
       </div>
       <el-form-item prop="username">
         <svg-icon icon="user" class="svg-container"></svg-icon>
@@ -25,7 +25,9 @@
         <el-input v-model="loginForm.password" :type="passwordType"></el-input>
         <svg-icon :icon="passwordType === 'password' ? 'eye' : 'eye-open'" @click="changeType"></svg-icon>
       </el-form-item>
-      <el-button type="primary" class="login-button" @click="submitForm">登陆</el-button>
+      <el-button type="primary" class="login-button" @click="submitForm">{{
+        $t('login.btnTitle')
+      }}</el-button>
     </el-form>
   </div>
 </template>

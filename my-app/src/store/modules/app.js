@@ -8,6 +8,7 @@ export default {
   state: () => ({
     token: localStorage.getItem("token") || "",
     sideType: true,
+    lang: localStorage.getItem("lang") || "zh",
   }),
   mutations: {
     setToken(state, token) {
@@ -17,6 +18,9 @@ export default {
     },
     changeSideType(state) {
       state.sideType = !state.sideType;
+    },
+    changeLang(state, lang) {
+      state.lang = lang;
     }
   },
   actions: {
