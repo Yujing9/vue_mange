@@ -68,9 +68,9 @@ module.exports = {
     hot: false,
     proxy: {
       '/api': {
-        // target: 'http://43.143.0.76:8889/api/private/v1/',
+        target: 'http://43.143.0.76:8889/api/private/v1/',
         // target: 'http://120.78.137.246:8888/api/private/v1/',
-        target: 'http://127.0.0.1:8888/api/private/v1/',
+        // target: 'http://127.0.0.1:8888/api/private/v1/',
         
         changeOrigin: true,
         pathRewrite: {
